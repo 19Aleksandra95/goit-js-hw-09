@@ -54,25 +54,23 @@ if (selectedDates[0] < new Date()){
     return value.toString().padStart(2, '0');
   }
 
-  startBtn.addEventListener('click', () => {
+  btnStart.addEventListener('click', () => {
     let timer = setInterval(() => {
-        let countdown = new Date(text.value) - new Date();
-        startBtn.disabled = true;
-
-        if(countdown >= 0) {
-            let timeObject = convertMs(countdown);
-            days.textContent = addLeadingZero(timeObject.days);
-            hours.textContent = addLeadingZero(timeObject.hours);
-            minutes.textContent = addLeadingZero(timeObject.minutes); 
-            seconds.textContent = addLeadingZero(timeObject.seconds);
+      let countdown = new Date(text.value) - new Date();
+      btnStart.disabled = true;
+      if (countdown >= 0) {
+        let timeObject = convertMs(countdown);
+        days.textContent = addLeadingZero(timeObject.days);
+        hours.textContent = addLeadingZero(timeObject.hours);
+        minutes.textContent = addLeadingZero(timeObject.minutes);
+        seconds.textContent = addLeadingZero(timeObject.seconds);
+        if (countdown <= 10000) {
+          timerHtml.style.color = 'tomato';
         }
-
-        if(countdown <= 1000){
-time.style.color = 'red';
-        } else {
-            Notiflix.Notify.success('Finished');
-            time.style.color = 'green';
-            clearInterval(timer);
-        }
-    }, 1000 )
+      } else {
+        Notiflix.Notify.success('Countdown finished');
+        timerHtml.style.color = 'black';
+        clearInterval(timer);
+      }
+    }, 1000);
   });
