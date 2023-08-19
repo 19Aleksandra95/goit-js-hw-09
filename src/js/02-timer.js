@@ -7,10 +7,9 @@ const time = document.querySelector('.timer');
 const startBtn = document.querySelector('button[data-start]');
 const days = document.querySelector('span[data-days]');
 const hours = document.querySelector('span[data-hours]');
-const minutes = document.querySelector('span[data=minutes]');
+const minutes = document.querySelector('span[data-minutes]');
 const seconds = document.querySelector('span[data-seconds]');
 
-let timerId = null;
 startBtn.disabled = true;
 
 const options = {
@@ -65,11 +64,11 @@ if (selectedDates[0] < new Date()){
         minutes.textContent = addLeadingZero(timeObject.minutes);
         seconds.textContent = addLeadingZero(timeObject.seconds);
         if (countdown <= 10000) {
-          timerHtml.style.color = 'tomato';
+          time.style.color = 'red';
         }
       } else {
         Notiflix.Notify.success('Countdown finished');
-        timerHtml.style.color = 'black';
+        time.style.color = 'green';
         clearInterval(timer);
       }
     }, 1000);
