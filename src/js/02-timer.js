@@ -54,7 +54,7 @@ if (selectedDates[0] < new Date()){
     return value.toString().padStart(2, '0');
   }
 
-  btnStart.addEventListener('click', () => {
+  startBtn.addEventListener('click', () => {
     let timer = setInterval(() => {
       let countdown = new Date(text.value) - new Date();
       btnStart.disabled = true;
