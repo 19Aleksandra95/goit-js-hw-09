@@ -56,7 +56,7 @@ if (selectedDates[0] < new Date()){
   startBtn.addEventListener('click', () => {
     let timer = setInterval(() => {
       let countdown = new Date(text.value) - new Date();
-      btnStart.disabled = true;
+      startBtn.disabled = true;
       if (countdown >= 0) {
         let timeObject = convertMs(countdown);
         days.textContent = addLeadingZero(timeObject.days);
