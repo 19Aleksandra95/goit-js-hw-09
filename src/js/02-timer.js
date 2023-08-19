@@ -56,7 +56,7 @@ if (selectedDates[0] < new Date()){
 
   startBtn.addEventListener('click', () => {
     let timer = setInterval(() => {
-        let countdown = newDate(text.value) - new Date();
+        let countdown = new Date(text.value) - new Date();
         startBtn.disabled = true;
 
         if(countdown >= 0) {
