@@ -10,7 +10,8 @@ function createPromise(position, delay) {
       reject ({position, delay})
     }
   }, delay)
-   })
+   });
+   return promise;
 } 
 
 const formEl = document.querySelector('.form');
