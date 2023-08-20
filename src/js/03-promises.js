@@ -13,10 +13,7 @@ function createPromise(position, delay) {
    })
 } 
 
-return promise;
-
 const formEl = document.querySelector('.form');
-
 formEl.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
