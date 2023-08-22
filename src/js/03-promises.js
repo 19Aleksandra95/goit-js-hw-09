@@ -24,10 +24,9 @@ function onSubmit(e) {
     delay += step;
   }
 }
-function onSucces ({position, delay}) {
+function onSuccess({ position, delay }) {
   Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
 }
-
-function onError ({position, delay}) {
+function onError({ position, delay }) {
   Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
 }

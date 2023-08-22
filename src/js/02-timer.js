@@ -65,6 +65,8 @@ if (selectedDates[0] < new Date()){
         if (countdown <= 10000) {
           time.style.color = 'red';
         }
-      } 
+      } else {
+        clearInterval(timer);
+      }
     }, 1000);
   });
