@@ -65,10 +65,6 @@ if (selectedDates[0] < new Date()){
         if (countdown <= 10000) {
           time.style.color = 'red';
         }
-      } else {
-        Notiflix.Notify.success('Countdown finished');
-        time.style.color = 'green';
-        clearInterval(timer);
-      }
+      } 
     }, 1000);
   });
