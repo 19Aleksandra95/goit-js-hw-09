@@ -22,8 +22,7 @@ if (selectedDates[0] < new Date()){
     Notiflix.Notify.failure("Please choose a date in the future");
     startBtn.disabled = true;
 } else {
-
-    startBtn.disabled = false;
+   startBtn.disabled = false;
 }
     },
   };
